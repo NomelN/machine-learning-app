@@ -21,8 +21,9 @@ def reconnaissance_chiffre(image):
 iface = gr.Interface(
     fn=reconnaissance_chiffre,
     inputs=gr.Image(shape=(28, 28), image_mode='L', invert_colors=True, source='canvas'),
-    outputs=gr.Label(num_top_classes=3),
-    live=True
+    outputs=gr.Label(num_top_classes=3, color="green"),
+    live=True,
+    title="handwritten digit recognition application",
 )
 
 iface.launch()
